@@ -1,0 +1,11 @@
+[package]
+name = "isc_tracker"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+eframe = "0.27.0"      # Framework para la interfaz gráfica de escritorio
+egui_extras = "0.27.0" # Extensiones para hacer tablas de datos en la UI
+serde = { version = "1.0", features = ["derive"] }
+csv = "1.3"
+uuid = { version = "1.8", features = ["v4", "serde"] } # Identificadores únicos
