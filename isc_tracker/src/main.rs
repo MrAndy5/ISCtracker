@@ -6,7 +6,7 @@ use uuid::Uuid;
 
 const CSV_PATH: &str = "ISCTRACKER.csv";
 
-// --- MODELO DE DATOS ---
+
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct ElectronicComponent {
@@ -233,10 +233,10 @@ impl eframe::App for IscTrackerApp {
 
                     ui.add_space(10.0);
                     ui.horizontal(|ui| {
-                        if ui.button("💾 Guardar Cambios").clicked() {
+                        if ui.button("Guardar Cambios").clicked() {
                             save_edit = true;
                         }
-                        if ui.button("❌ Cancelar").clicked() {
+                        if ui.button("Cancelar").clicked() {
                             close_edit = true;
                         }
                     });
@@ -262,7 +262,7 @@ impl eframe::App for IscTrackerApp {
         egui::TopBottomPanel::top("top_panel").show(ctx, |ui| {
             ui.add_space(10.0);
             ui.horizontal(|ui| {
-                ui.heading("Inventario IFS-08");
+                ui.heading("Inventario ISC");
                 ui.separator();
                 ui.label("🔍 Buscar:");
                 ui.text_edit_singleline(&mut self.search_query);
